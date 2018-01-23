@@ -1,0 +1,13 @@
+<form>
+  <input type="text" data="test" name="hasInput" #item />
+  <select (change)="getObjectFromSelect($event.target.value)" #myName>
+    <option id="test" *ngFor="let name of names" [value]="name | json" >{{name.title}}</option> 
+  </select>
+
+  <div>
+      <div *ngFor="let name of names" (click)="displayMyName(name)">{{name.title}}</div>  
+  </div>
+
+
+  <span>{{parameter}}</span>
+  </form>
